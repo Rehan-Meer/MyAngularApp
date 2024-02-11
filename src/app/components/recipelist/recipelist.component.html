@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-xs-12">
+     <button class="btn btn-success">New Recipe</button>
+    </div>
+</div>
+
+<hr>
+
+<div class="row">
+   <div class="col-xs-12"> 
+      <app-recipeitem 
+      *ngFor="let _recipe of recipes" 
+      [recipe]="_recipe"
+      (recipeSelected)="onRecipeSelected(_recipe)"
+      ></app-recipeitem>
+   </div>    
+</div>
